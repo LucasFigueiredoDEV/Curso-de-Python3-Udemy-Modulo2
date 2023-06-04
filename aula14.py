@@ -13,13 +13,13 @@ pessoa = {
 
 pessoa.setdefault('idade', 0)
 print(pessoa['idade'])
-# print(len(pessoa))
-# print(list(pessoa.keys()))
-# print(list(pessoa.values()))
-# print(list(pessoa.items()))
+print(len(pessoa))
+print(list(pessoa.keys()))
+print(list(pessoa.values()))
+print(list(pessoa.items()))
 
-# for valor in pessoa.values():
-#     print(valor)
+for valor in pessoa.values():
+    print(valor)
 
-# for chave, valor in pessoa.items():
-#     print(chave, valor)
+for chave, valor in pessoa.items():
+    print(chave, valor)
