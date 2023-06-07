@@ -1,26 +1,28 @@
 # Dictionary Comprehension e Set Comprehension
 
 produto = {
-    'nome' : 'Caneta Azul',
-    'preco' : 2.5,
-    'categoria' : 'desenho',
+    'nome': 'Caneta Azul',
+    'preco': 2.5,
+    'categoria': 'Escritório',
 }
 
 dc = {
     chave: valor.upper()
-     if isinstance(valor, str)#Checka se o valor é uma str para que possa aplicar o método uppr, caso não seja ele só imprime o valor padrão
-     else valor for chave, valor in produto.items
+    if isinstance(valor, str) else valor
+    for chave, valor
+    in produto.items()
+    if chave != 'categoria'
 }
 
 lista = [
     ('a', 'valor a'),
     ('b', 'valor a'),
-    ('c', 'valor a'),
+    ('b', 'valor a'),
 ]
-
-
-dc1 = {
-    chave:valor 
+dc = {
+    chave: valor
     for chave, valor in lista
 }
-print(dc)
+
+s1 = {2 ** i for i in range(10)}
+print(s1)
